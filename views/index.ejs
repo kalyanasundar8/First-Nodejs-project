@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include('./comp/head.ejs') %>
+  <body>
+    <%- include('./comp/nav.ejs') %>
+
+    <div class="hero content">
+      <h2>All hero</h2>
+      <% if(heros.length > 0) { %> <% heros.forEach(hero => { %>
+      <h3 class="name"><%= hero.name %></h3>
+      <p class="uni"><%= hero.universe %></p>
+      <% }) %> <% } %>
+    </div>
+
+    <%- include('./comp/footer.ejs') %>
+  </body>
+</html>
